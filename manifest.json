@@ -1,29 +1,32 @@
+
 {
-    "manifest_version": 3,
-    "name": "Owlock",
-    "version": "1.0",
-    "description": "Simple YouTube shorts blocker using CSS",
+  "manifest_version": 3,
+  "name": "Owlock",
+  "version": "1.0",
+  "description": "A distraction-free YouTube experience.",
+  "icons": {
+    "48": "icons/owlock-48.png",
+    "96": "icons/owlock-96.png"
+  },
+  "action": {
+    "default_icon": {
+      "48": "icons/owlock-48.png",
+      "96": "icons/owlock-96.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://youtube.com/*",
+        "https://www.youtube.com/*"
+      ],
+      "css": [
+        "src/css/shorts.css",
+        "src/css/recommended.css",
+        "src/css/navigation.css"
+      ],
 
-    "icons": {
-        "48": "icons/owlock-48.png",
-        "96": "icons/owlock-96.png"
-    },
-
-    "action": {
-        "default_icon": {
-            "48": "icons/owlock-48.png",
-            "96": "icons/owlock-96.png"
-        }
-    },
-
-    "content_scripts": [
-        {
-            "matches": [
-                "*://youtube.com/*",
-                "*://www.youtube.com/*"
-            ],
-            "css": ["style.css"],
-            "run_at": "document_start"
-        }
-    ]
+      "run_at": "document_idle"
+    }
+  ]
 }

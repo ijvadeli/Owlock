@@ -1,0 +1,11 @@
+/* Hide related/recommended videos sidebar */
+#related,
+ytd-watch-next-secondary-results-renderer {
+    display: none !important;
+}
+
+/* Resize video content (main page) to full width */
+#primary {
+    max-width: 100% !important;
+    width: 100% !important;
+}
