@@ -1,0 +1,23 @@
+/* Hide Shorts shelves */
+ytd-reel-shelf-renderer,
+ytd-rich-section-renderer,
+ytd-rich-section-renderer:has(ytd-reel-shelf-renderer) {
+  display: none !important;
+}
+
+/* Hide Shorts video cards on the homepage */
+ytd-rich-item-renderer:has(a[href^="/shorts/"]) {
+  display: none !important;
+}
+
+/* Hide Shorts in search results and other video grids */
+ytd-video-renderer:has(a[href^="/shorts/"]),
+ytd-grid-video-renderer:has(a[href^="/shorts/"]) {
+  display: none !important;
+}
+
+/* Hide Shorts in the sidebar */
+ytd-guide-entry-renderer:has(a[href="/feed/shorts"]),
+ytd-mini-guide-entry-renderer:has(a[href="/shorts"]) {
+  display: none !important;
+}
