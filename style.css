@@ -1,6 +1,7 @@
 /* Hide Shorts shelves */
+ytd-rich-shelf-renderer:has([is-shorts]),
 ytd-reel-shelf-renderer,
-ytd-rich-shelf-renderer,
+ytd-rich-section-renderer,
 ytd-rich-section-renderer:has(ytd-reel-shelf-renderer) {
   display: none !important;
 }
@@ -17,7 +18,13 @@ ytd-grid-video-renderer:has(a[href^="/shorts/"]) {
 }
 
 /* Hide Shorts in the sidebar */
-ytd-guide-entry-renderer:has(a[href="/feed/shorts"]),
-ytd-mini-guide-entry-renderer:has(a[href="/shorts"]) {
+ytd-guide-entry-renderer:has(a[href*="/shorts"]),
+ytd-mini-guide-entry-renderer:has(a[href*="/shorts"]) {
   display: none !important;
+}
+
+/* Hide inline Shorts in subscription grids or video feeds */
+ytd-grid-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]),
+ytd-rich-item-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]) {
+    display: none !important;
 }
