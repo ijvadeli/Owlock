@@ -1,6 +1,6 @@
 /* Hide Shorts shelves */
 ytd-reel-shelf-renderer,
-ytd-rich-section-renderer,
+ytd-rich-shelf-renderer,
 ytd-rich-section-renderer:has(ytd-reel-shelf-renderer) {
   display: none !important;
 }
