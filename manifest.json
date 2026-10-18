@@ -20,10 +20,16 @@
         "https://youtube.com/*",
         "https://www.youtube.com/*"
       ],
+      
       "css": [
         "src/css/shorts.css",
         "src/css/recommended.css",
-        "src/css/navigation.css"
+        "src/css/navigation.css",
+        "src/css/home.css"
+      ],
+
+      "js": [
+        "src/js/home.js"
       ],
 
       "run_at": "document_idle"
