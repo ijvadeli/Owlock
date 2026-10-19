@@ -4,44 +4,48 @@
   "name": "owlet",
   "version": "1.2",
   "description": "A calmer way to watch.",
-  "icons": {
-    "48": "icons/owlet-48.png",
-    "96": "icons/owlet-96.png"
-  },
+
+  "permissions": ["storage"],
+
   "action": {
+    "default_popup": "src/html/settings-popup.html",
     "default_icon": {
       "48": "icons/owlet-48.png",
       "96": "icons/owlet-96.png"
     }
   },
+
   "content_scripts": [
     {
       "matches": [
         "https://youtube.com/*",
         "https://www.youtube.com/*"
       ],
-      
       "css": [
-        "src/css/global.css",
-        "src/css/shorts.css",
-        "src/css/view-layout.css",
-        "src/css/navigation.css",
-        "src/css/home.css"
+        "src/css/global.css"
       ],
-
       "js": [
+        "src/js/settings-loader.js",
         "src/js/home.js"
       ],
-
       "run_at": "document_idle"
     }
   ],
 
-    "web_accessible_resources": [{
+  "web_accessible_resources": [
+    {
       "resources": [
+        "src/css/home.css",
+        "src/css/shorts.css",
+        "src/css/navigation.css",
+        "src/css/view-layout.css",
         "src/html/home.html",
         "icons/owlet-96.png"
       ],
-      "matches": ["https://www.youtube.com/*"]
-  }]
+      "matches": [
+        "https://youtube.com/*",
+        "https://www.youtube.com/*"
+      ]
+    }
+  ]
 }

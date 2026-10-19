@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Owlet</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 320px;
+      margin: 0;
+      padding: 20px;
+      font: 14px system-ui, sans-serif;
+      background: #faf9f6;
+      color: #292923;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    header img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 21px;
+    }
+
+    .subtitle {
+      margin: 3px 0 0;
+      color: #77776e;
+      font-size: 12px;
+    }
+
+    .setting {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 0;
+      border-top: 1px solid #e7e5de;
+      cursor: pointer;
+    }
+
+    .description {
+      display: block;
+      margin-top: 3px;
+      color: #77776e;
+      font-size: 12px;
+    }
+
+    input {
+      appearance: none;
+      flex-shrink: 0;
+      width: 38px;
+      height: 22px;
+      margin: 0;
+      border-radius: 20px;
+      background: #d5d4ce;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.18s;
+    }
+
+    input::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 3px;
+      left: 3px;
+      background: white;
+      border-radius: 50%;
+      transition: transform 0.18s;
+    }
+
+    input:checked {
+      background: #526b55;
+    }
+
+    input:checked::after {
+      transform: translateX(16px);
+    }
+
+    input:focus-visible {
+      outline: 2px solid #526b55;
+      outline-offset: 3px;
+    }
+
+    #status {
+      margin: 15px 0 0;
+      color: #77776e;
+      font-size: 11px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="../../icons/owlet-48.png" alt="">
+    <div>
+      <h1>owlet</h1>
+      <p class="subtitle">A calmer way to watch.</p>
+    </div>
+  </header>
+
+  <label class="setting">
+    <span>
+      Home page
+      <span class="description">Cleaner homepage</span>
+    </span>
+    <input type="checkbox" data-setting="home">
+  </label>
+
+  <label class="setting">
+    <span>
+      Shorts
+      <span class="description">Shorts modifications</span>
+    </span>
+    <input type="checkbox" data-setting="shorts">
+  </label>
+
+  <label class="setting">
+    <span>
+      Navigation
+      <span class="description">Simplified sidebar</span>
+    </span>
+    <input type="checkbox" data-setting="navigation">
+  </label>
+
+  <label class="setting">
+    <span>
+      Watch layout
+      <span class="description">Viewing page modifications</span>
+    </span>
+    <input type="checkbox" data-setting="viewLayout">
+  </label>
+
+  <p id="status" role="status">
+    Settings saved automatically
+  </p>
+
+  <script src="../js/settings.js"></script>
+</body>
+</html>
