@@ -1,20 +1,26 @@
-function customizeHomepage() {
+async function customizeHomepage() {
     // Check if on homepage
     if (window.location.pathname === "/") {
         // Target container holding main grid
         const primaryContent = document.querySelector("ytd-browse");
 
         if (primaryContent) {
-            // Clear all recommended videos
-            primaryContent.innerHTML = "";
+            try {
+                const response = await fetch(
+                    chrome.runtime.getURL("src/html/home.html")
+                );
 
-            // Create and style placeholder text
-            const home = document.createElement("div");
-            home.setAttribute("id", "home");
-            home.textContent = "Owlock";
+                let html = await response.text();
 
-            // Add text to page
-            primaryContent.appendChild(home)
+                html = html.replace(
+                    "../../icons/owlock-96.png",
+                    chrome.runtime.getURL("icons/owlock-96.png")
+                );
+
+                primaryContent.innerHTML = html;
+            } catch (error) {
+                console.error("Failed to load home.html:", error);
+            }
         }
     }
 }

@@ -1,30 +1,64 @@
-/* Hide Shorts shelves */
-ytd-rich-shelf-renderer:has([is-shorts]),
+/* Shorts shelves, feeds, and player components */
 ytd-reel-shelf-renderer,
-ytd-rich-section-renderer,
-ytd-rich-section-renderer:has(ytd-reel-shelf-renderer) {
-  display: none !important;
+ytd-reel-video-renderer,
+ytd-shorts,
+ytd-shorts-player,
+ytd-reel-item-renderer,
+[is-shorts],
+[page-subtype="shorts"] {
+    display: none !important;
 }
 
-/* Hide Shorts video cards on the homepage */
-ytd-rich-item-renderer:has(a[href^="/shorts/"]) {
-  display: none !important;
+/* Shorts links and their known card/container types */
+ytd-rich-item-renderer:has(a[href*="/shorts/"]),
+ytd-video-renderer:has(a[href*="/shorts/"]),
+ytd-grid-video-renderer:has(a[href*="/shorts/"]),
+ytd-rich-grid-media:has(a[href*="/shorts/"]),
+ytd-rich-shelf-renderer:has(a[href*="/shorts/"]),
+ytd-rich-section-renderer:has(a[href*="/shorts/"]),
+ytd-reel-shelf-renderer:has(a[href*="/shorts/"]),
+yt-lockup-view-model:has(a[href*="/shorts/"]),
+ytm-video-with-context-renderer:has(a[href*="/shorts/"]) {
+    display: none !important;
 }
 
-/* Hide Shorts in search results and other video grids */
-ytd-video-renderer:has(a[href^="/shorts/"]),
-ytd-grid-video-renderer:has(a[href^="/shorts/"]) {
-  display: none !important;
+/* Shorts identified by overlay attributes */
+ytd-rich-item-renderer:has([overlay-style="SHORTS"]),
+ytd-video-renderer:has([overlay-style="SHORTS"]),
+ytd-grid-video-renderer:has([overlay-style="SHORTS"]),
+ytd-rich-grid-media:has([overlay-style="SHORTS"]),
+ytd-rich-shelf-renderer:has([overlay-style="SHORTS"]),
+yt-lockup-view-model:has([overlay-style="SHORTS"]) {
+    display: none !important;
 }
 
-/* Hide Shorts in the sidebar */
+/* Newer Shorts lockups and thumbnail indicators */
+yt-shorts-lockup-view-model,
+ytm-shorts-lockup-view-model,
+[overlay-style="SHORTS"],
+ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"] {
+    display: none !important;
+}
+
+/* Shorts navigation links and tabs */
 ytd-guide-entry-renderer:has(a[href*="/shorts"]),
-ytd-mini-guide-entry-renderer:has(a[href*="/shorts"]) {
-  display: none !important;
+ytd-mini-guide-entry-renderer:has(a[href*="/shorts"]),
+a[href="/shorts"],
+a[href^="/shorts?"],
+a[title="Shorts"],
+[tab-title="Shorts"] {
+    display: none !important;
 }
 
-/* Hide inline Shorts in subscription grids or video feeds */
-ytd-grid-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]),
-ytd-rich-item-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]) {
+/* Shorts-related sections identified by contents */
+ytd-rich-section-renderer:has(ytd-reel-shelf-renderer),
+ytd-rich-section-renderer:has(yt-shorts-lockup-view-model),
+ytd-rich-section-renderer:has(ytm-shorts-lockup-view-model) {
+    display: none !important;
+}
+
+/* Shorts routes are left blank */
+ytd-app:has(ytd-shorts),
+ytd-app:has(ytd-shorts-player) {
     display: none !important;
 }

@@ -22,8 +22,9 @@
       ],
       
       "css": [
+        "src/css/global.css",
         "src/css/shorts.css",
-        "src/css/recommended.css",
+        "src/css/view-layout.css",
         "src/css/navigation.css",
         "src/css/home.css"
       ],
@@ -34,5 +35,13 @@
 
       "run_at": "document_idle"
     }
-  ]
+  ],
+
+    "web_accessible_resources": [{
+      "resources": [
+        "src/html/home.html",
+        "icons/owlock-96.png"
+      ],
+      "matches": ["https://www.youtube.com/*"]
+  }]
 }
