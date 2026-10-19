@@ -1,0 +1,14 @@
+/* Hide notification ping badge */
+.ytSpecIconBadgeShapeBadge {
+    display: none !important;
+}
+
+/* Hide sidebar */
+ytd-mini-guide-entry-renderer {
+    display: none !important;
+}
+
+/* Hide bookmarks/history timestamps on videos */
+ytd-expandable-metadata-renderer {
+    display: none !important;
+}

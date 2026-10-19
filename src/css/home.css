@@ -1,0 +1,19 @@
+/* Home styling */
+#owl-home {
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    height: 80vh;
+}
+
+/* Header styling */
+#owl-header {
+    text-align: center;
+}
+
+/* Frosted glass remove */
+#frosted-glass {
+    display: none !important;
+}

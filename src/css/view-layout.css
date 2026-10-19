@@ -1,0 +1,17 @@
+/* Hide related/recommended videos sidebar */
+#related,
+#secondary,
+ytd-watch-next-secondary-results-renderer {
+    display: none !important;
+    width: 0px;
+}
+
+/* Resize video content (main page) to full width */
+#primary ytd-watch-flexy {
+    width: 100vh !important;
+}
+
+/* Remove shorts divider */
+grid-shelf-view-model {
+    display: none !important;
+}
