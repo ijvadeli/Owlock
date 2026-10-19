@@ -6,7 +6,7 @@ Owlock is a simple browser extension that hides YouTube shorts with CSS and chan
 
 ## Ideas
 
-My current ideas for the app, will be updated and changed.
+My current ideas for the extension, will be updated and changed.
 - Block shorts
 - Edit navigation
     - Less distracting, like removing notification pings

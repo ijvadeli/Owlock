@@ -15,3 +15,13 @@ ytd-watch-next-secondary-results-renderer {
 grid-shelf-view-model {
     display: none !important;
 }
+
+/* Stop ad display */
+ytd-search-pyv-renderer {
+    display: none !important;
+}
+
+/* Hide about text when searching videos */
+.metadata-snippet-text, ytd-badge-supported-renderer {
+    display: none !important;
+}
