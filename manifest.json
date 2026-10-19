@@ -1,17 +1,17 @@
 
 {
   "manifest_version": 3,
-  "name": "Owlock",
-  "version": "1.1",
-  "description": "Making YouTube more accessible and distraction free.",
+  "name": "owlet",
+  "version": "1.2",
+  "description": "A calmer way to watch.",
   "icons": {
-    "48": "icons/owlock-48.png",
-    "96": "icons/owlock-96.png"
+    "48": "icons/owlet-48.png",
+    "96": "icons/owlet-96.png"
   },
   "action": {
     "default_icon": {
-      "48": "icons/owlock-48.png",
-      "96": "icons/owlock-96.png"
+      "48": "icons/owlet-48.png",
+      "96": "icons/owlet-96.png"
     }
   },
   "content_scripts": [
@@ -40,7 +40,7 @@
     "web_accessible_resources": [{
       "resources": [
         "src/html/home.html",
-        "icons/owlock-96.png"
+        "icons/owlet-96.png"
       ],
       "matches": ["https://www.youtube.com/*"]
   }]

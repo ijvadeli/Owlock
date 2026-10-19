@@ -1,7 +1,7 @@
 /* Remove rounded borders for everything and minimum font-size */
 * {
     font-family: monospace !important;
-    border-radius: 0px !important;
+    border-radius: 2.5px !important;
 }
 
 /* Header and text sizing */

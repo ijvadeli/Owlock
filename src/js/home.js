@@ -13,8 +13,8 @@ async function customizeHomepage() {
                 let html = await response.text();
 
                 html = html.replace(
-                    "../../icons/owlock-96.png",
-                    chrome.runtime.getURL("icons/owlock-96.png")
+                    "../../icons/owlet-96.png",
+                    chrome.runtime.getURL("icons/owlet-96.png")
                 );
 
                 primaryContent.innerHTML = html;
